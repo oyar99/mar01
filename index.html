@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/3e77e2bda8.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Maria Socarras</title>
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+    <script type="module" src="/src/main.ts"></script>
+
+    <main>
+      <input name="actions" id="button-profile" type="radio" />
+      <input name="actions" id="button-services" type="radio" />
+      <input name="actions" id="button-education" type="radio" />
+      <div style="--index: 1" class="action-button-container action-button-container-profile">
+        <label for="button-profile" class="action-button">
+          <span></span>
+        </label>
+        <i class="fas fa-user-circle"></i>
+      </div>
+      <div style="--index: 2" class="action-button-container action-button-container-services">
+        <label for="button-services" class="action-button">
+          <span></span>
+        </label>
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <div style="--index: 3" class="action-button-container action-button-container-education">
+        <label for="button-education" class="action-button">
+          <span></span>
+        </label>
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div id="timeline-container" class="timeline-container">
+        <section title="profile" id="profile-section">
+          <div class="card" style="--index: 0">
+            <div class="card-profile-image">
+              <img
+                alt="My Picture"
+                src="/me.jpeg"
+                height="200"
+                width="200"
+                style="border-radius: 100px"
+              />
+            </div>
+            <div class="card-title">
+              <h1>María Barrios Socarras</h1>
+              <p>Sanchez Acero & Asociados <a class="linkedin-link" href="https://www.linkedin.com/in/mariabarriossocarras/">
+                <i class="fa fa-linkedin-square"></i>
+              </a></p>
+            </div>
+            <button
+              aria-label="next page"
+              class="next-page"
+              type="button"
+              onclick="document.getElementById('button-services').click()">
+              <i class="fa fa-arrow-down"></i>
+            </button>
+          </div>
+        </section>
+        <section title="services" id="services-section">
+          <div class="card" style="--index: 0">
+            <button
+              aria-label="previous page"
+              class="prev-page"
+              type="button"
+              onclick="document.getElementById('button-profile').click()">
+              <i class="fa fa-arrow-up"></i>
+            </button>
+            <div class="services-container">
+              <div class="grid-item">
+                <span class="grid-item-title">
+                  Derecho Laboral del sector privado y del sector publico
+                </span>
+                <img alt="Derecho laboral" src="/derecho-laboral.webp">
+              </div>
+              <div class="grid-item">
+                <span class="grid-item-title">
+                  Derecho laboral y de MiPymes
+                </span>
+                <img alt="Derecho laboral" src="/derecho-pymes.webp">
+              </div>
+              <div class="grid-item">
+                <span class="grid-item-title">
+                  Derecho comercial y tributario
+                </span>
+                <img alt="Derecho laboral" src="/derecho-comercial.webp">
+              </div>
+              <div class="grid-item">
+                <span class="grid-item-title">
+                  Derecho penal
+                </span>
+                <img alt="Derecho laboral" src="/derecho-penal.webp">
+              </div>
+              <div class="grid-item">
+                <span class="grid-item-title">
+                  Derecho sindical, asociativo y politico
+                </span>
+                <img alt="Derecho laboral" src="/derecho-sindical.webp">
+              </div>
+              <div class="grid-item">
+                <span class="grid-item-title">
+                  Derecho administrativo
+                </span>
+                <img alt="Derecho laboral" src="/derecho-administrativo.webp">
+              </div>
+            </div>
+            <button
+              aria-label="next page"
+              class="next-page"
+              type="button"
+              onclick="document.getElementById('button-education').click()">
+              <i class="fa fa-arrow-down"></i>
+            </button>
+          </div>
+        </section>
+        <section title="education" id="education-section">
+          <div class="card" style="--index: 0">
+            <button
+              aria-label="previous page"
+              class="prev-page"
+              type="button"
+              onclick="document.getElementById('button-services').click()">
+              <i class="fa fa-arrow-up"></i>
+            </button>
+            <div class="about-me">
+              <h1>María Barrios Socarras</h1>
+              <p>
+                Estudiante de Derecho de la Universidad Externado de Colombia con principal interés en investigación, derecho laboral
+                individual y colectivo, derecho penal y criminología. Asimismo, me apasiona conocer acerca de las nuevas tecnologías y su uso en
+                los procesos jurídicos. Tengo un buen manejo del inglés y de las herramientas ofimáticas de Microsoft y Google.
+              </p>
+              <div class="horz-line"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,294 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+:root {
+	--main-border-color: #0a0a0a;
+	--font-color: #0a0a0a;
+}
+
+html,
+body {
+	font-family: "Montserrat", sans-serif;
+  background-color: #f1efe5;
+  overflow: hidden;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  position: absolute;
+  color: var(--font-color);
+  width: 100%;
+}
+
+.timeline-container {
+	position: relative;
+	transition: all 2s ease-in-out;
+  margin: 0 80px;
+}
+
+.timeline-container .card {
+	max-width: 700px;
+}
+
+.card {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  position: relative;
+  height: 100%;
+  justify-content: center;
+}
+
+.card .card-profile-image img {
+  margin-right: 50px;
+  border: 1px solid var(--font-color);
+  transition: all 0.25s ease-in-out;
+  opacity: 1;
+}
+
+.card .card-title {
+  text-align: right;
+}
+
+.card .about-me {
+  text-align: left;
+}
+
+.card .card-title,
+.card .about-me {
+	font-size: 1em;
+	font-weight: 500;
+}
+
+.card .card-title h1,
+.card .about-me h1 {
+	font-size: 2.5em;
+	font-weight: 600;
+}
+
+.card .card-subtitle {
+	font-size: 0.7em;
+	font-weight: 500;
+}
+
+.card .card-subtitle p {
+	font-size: 0.8em;
+	font-weight: 700;
+}
+
+#services-section,
+#education-section {
+	height: 100vh;
+}
+
+#profile-section {
+  height: calc(100vh - 20px);
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-button-container {
+	position: absolute;
+	display: grid;
+	top: calc(60px * var(--index));
+	right: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.action-button-container i {
+	grid-area: 1/1/2/2;
+	text-align: center;
+	z-index: 2000;
+	pointer-events: none;
+}
+
+.action-button {
+	z-index: 200;
+	width: 40px;
+	height: 40px;
+	border: 1px var(--main-border-color) solid;
+	border-radius: 50%;
+	cursor: pointer;
+	grid-area: 1/1/2/2;
+}
+
+.action-button:hover {
+	transform: scale(1.2);
+	transition: all 0.25s ease-in-out;
+}
+
+#button-profile,
+#button-services,
+#button-education {
+	height: 0;
+	width: 0;
+}
+
+#button-profile:checked ~ .timeline-container {
+	transform: translate3d(0, 0, 0);
+}
+
+#button-profile:checked ~ .action-button-container-profile {
+	transform: scale(1.1);
+}
+
+#button-services:checked ~ .timeline-container {
+	transform: translate3d(0, -100vh, 0);
+}
+
+#button-services:checked ~ .action-button-container-services {
+	transform: scale(1.1);
+}
+
+#button-education:checked ~ .timeline-container {
+	transform: translate3d(0, calc(-100vh * 2), 0);
+}
+
+#button-education:checked ~ .action-button-container-education {
+	transform: scale(1.1);
+}
+
+a.linkedin-link {
+  color: var(--font-color);
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.grid-item {
+  background-color: #f1efe5;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-height: 35vh;
+}
+
+.grid-item img {
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.grid-item .grid-item-title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.8em;
+  background: #f1efe5;
+}
+
+.grid-item:hover {
+  transform: scale(1.35);
+  transition: transform 0.25s ease-in-out;
+  z-index: 3000;
+}
+
+.horz-line {
+  height: 1px;
+  background-color: #0a0a0a;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+
+.prev-page {
+  position: absolute;
+  height: max-content;
+  top: 20px;
+  left: 50%;
+  border: none;
+  animation: moveDownUp 1.5s linear infinite;
+  cursor: pointer;
+  transform: scale(1.5) translateX(-50%);
+}
+
+.next-page {
+  position: absolute;
+  height: max-content;
+  bottom: 5px;
+  left: 50%;
+  border: none;
+  animation: moveUpDown 1.5s linear infinite;
+  cursor: pointer;
+  transform: scale(1.5) translateX(-50%);
+}
+
+@keyframes moveDownUp {
+  0%, 100% {
+    top: 5px;
+  }
+
+  50% {
+    top: 20px;
+  }
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    bottom: 5px;
+  }
+
+  50% {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+	.card {
+		flex-direction: column;
+	}
+
+  .card .card-title {
+    text-align: center;
+  }
+
+  .card .card-profile-image img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .services-container {
+    
+  }
+
+  .card .about-me h1 {
+    font-size: 1.5em;
+  }
+}
