@@ -13,6 +13,8 @@ const educationButton: HTMLInputElement = <HTMLInputElement>(
   document.getElementById("button-education")
 );
 
+profileButton?.click();
+
 const WHEEL_DELTA_TRIGGER = 20;
 const ANIMATION_TIME = 1400;
 let isAnimationRunning =
