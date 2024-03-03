@@ -1,4 +1,5 @@
-// Add a wheel event listener to the window
+// Author: Jhon
+// Handles custom scroller logic relying on css animations
 const profileButton: HTMLInputElement = <HTMLInputElement>(
   document.getElementById("button-profile")
 );
@@ -14,7 +15,9 @@ const ANIMATION_TIME = 1400;
 let isAnimationRunning =
   false; /* indicates whether we know the animation is running - it does not reliable tell if it is running */
 
-window.addEventListener("wheel", (event) => {
+type Gesture = "up" | "down";
+
+const handleAnimation = (gesture: Gesture) => {
   if (isAnimationRunning) return;
   const startAnimationCounter = () => {
     isAnimationRunning = true;
@@ -23,7 +26,7 @@ window.addEventListener("wheel", (event) => {
     }, ANIMATION_TIME);
   };
   switch (true) {
-    case event.deltaY < WHEEL_DELTA_TRIGGER * -1:
+    case gesture === "up":
       switch (true) {
         case educationButton?.checked:
           servicesButton?.click();
@@ -35,7 +38,7 @@ window.addEventListener("wheel", (event) => {
           break;
       }
       break;
-    case event.deltaY > WHEEL_DELTA_TRIGGER:
+    case gesture === "down":
       switch (true) {
         case (!profileButton?.checked &&
           !servicesButton?.checked &&
@@ -50,4 +53,31 @@ window.addEventListener("wheel", (event) => {
           break;
       }
   }
+};
+window.addEventListener("wheel", (event) => {
+  switch (true) {
+    case event.deltaY > WHEEL_DELTA_TRIGGER:
+      handleAnimation("down");
+      break;
+    case event.deltaY < -WHEEL_DELTA_TRIGGER:
+      handleAnimation("up");
+      break;
+  }
+});
+
+let previousTouchY = 0;
+let deltaY = 0;
+
+window.addEventListener("touchmove", (event) => {
+  const currentTouchY = event.touches[0].clientY;
+  deltaY = currentTouchY - previousTouchY;
+  switch (true) {
+    case deltaY > WHEEL_DELTA_TRIGGER:
+      handleAnimation("down");
+      break;
+    case deltaY < -WHEEL_DELTA_TRIGGER:
+      handleAnimation("up");
+      break;
+  }
+  previousTouchY = currentTouchY;
 });
