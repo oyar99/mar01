@@ -1,5 +1,8 @@
 // Author: Jhon
 // Handles custom scroller logic relying on css animations
+import 'hammerjs'
+import { DIRECTION_DOWN, DIRECTION_UP } from 'hammerjs';
+
 const profileButton: HTMLInputElement = <HTMLInputElement>(
   document.getElementById("button-profile")
 );
@@ -65,19 +68,20 @@ window.addEventListener("wheel", (event) => {
   }
 });
 
-let previousTouchY = 0;
-let deltaY = 0;
 
-window.addEventListener("touchmove", (event) => {
-  const currentTouchY = event.touches[0].clientY;
-  deltaY = currentTouchY - previousTouchY;
-  switch (true) {
-    case deltaY > WHEEL_DELTA_TRIGGER:
+
+const manager = new Hammer.Manager(window.document.documentElement);
+const Swipe = new Hammer.Swipe();
+manager.add(Swipe);
+
+// Subscribe to a desired event
+manager.on('swipe', function(e) {
+  switch(e.offsetDirection) {
+    case DIRECTION_DOWN:
       handleAnimation("down");
       break;
-    case deltaY < -WHEEL_DELTA_TRIGGER:
+    case DIRECTION_UP:
       handleAnimation("up");
       break;
   }
-  previousTouchY = currentTouchY;
 });
