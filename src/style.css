@@ -43,7 +43,7 @@ main {
 
 .timeline-container {
 	position: relative;
-	transition: all 2s ease-in-out;
+	transition: all 1.5s ease-in-out;
   margin: 0 80px;
 }
 
@@ -197,7 +197,12 @@ a.linkedin-link {
   align-items: center;
   position: relative;
   overflow: hidden;
-  max-height: 35vh;
+  max-height: 25vh;
+}
+
+.grid-item a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .grid-item img {
@@ -213,6 +218,7 @@ a.linkedin-link {
   font-weight: 600;
   font-size: 0.8em;
   background: #f1efe5;
+  padding: 2px;
 }
 
 .grid-item:hover {
@@ -237,6 +243,7 @@ a.linkedin-link {
   animation: moveDownUp 1.5s linear infinite;
   cursor: pointer;
   transform: scale(1.5) translateX(-50%);
+  background: none;
 }
 
 .next-page {
@@ -248,6 +255,7 @@ a.linkedin-link {
   animation: moveUpDown 1.5s linear infinite;
   cursor: pointer;
   transform: scale(1.5) translateX(-50%);
+  background: none;
 }
 
 @keyframes moveDownUp {

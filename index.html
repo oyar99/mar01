@@ -25,19 +25,28 @@
       <input name="actions" id="button-profile" type="radio" />
       <input name="actions" id="button-services" type="radio" />
       <input name="actions" id="button-education" type="radio" />
-      <div style="--index: 1" class="action-button-container action-button-container-profile">
+      <div
+        style="--index: 1"
+        class="action-button-container action-button-container-profile"
+      >
         <label for="button-profile" class="action-button">
           <span></span>
         </label>
         <i class="fas fa-user-circle"></i>
       </div>
-      <div style="--index: 2" class="action-button-container action-button-container-services">
+      <div
+        style="--index: 2"
+        class="action-button-container action-button-container-services"
+      >
         <label for="button-services" class="action-button">
           <span></span>
         </label>
         <i class="fas fa-briefcase"></i>
       </div>
-      <div style="--index: 3" class="action-button-container action-button-container-education">
+      <div
+        style="--index: 3"
+        class="action-button-container action-button-container-education"
+      >
         <label for="button-education" class="action-button">
           <span></span>
         </label>
@@ -56,15 +65,22 @@
             </div>
             <div class="card-title">
               <h1>María Barrios Socarras</h1>
-              <p>Sanchez Acero & Asociados <a class="linkedin-link" href="https://www.linkedin.com/in/mariabarriossocarras/">
-                <i class="fa fa-linkedin-square"></i>
-              </a></p>
+              <p>
+                Sanchez Acero & Asociados
+                <a
+                  class="linkedin-link"
+                  href="https://www.linkedin.com/in/mariabarriossocarras/"
+                >
+                  <i class="fa fa-linkedin-square"></i>
+                </a>
+              </p>
             </div>
             <button
               aria-label="next page"
               class="next-page"
               type="button"
-              onclick="document.getElementById('button-services').click()">
+              onclick="document.getElementById('button-services').click()"
+            >
               <i class="fa fa-arrow-down"></i>
             </button>
           </div>
@@ -75,52 +91,157 @@
               aria-label="previous page"
               class="prev-page"
               type="button"
-              onclick="document.getElementById('button-profile').click()">
+              onclick="document.getElementById('button-profile').click()"
+            >
               <i class="fa fa-arrow-up"></i>
             </button>
             <div class="services-container">
               <div class="grid-item">
-                <span class="grid-item-title">
-                  Derecho Laboral del sector privado y del sector publico
-                </span>
-                <img alt="Derecho laboral" src="derecho-laboral.webp">
+                <a
+                  id="gi-1"
+                  class="grid-item-title"
+                  href="https://api.whatsapp.com/send?phone=573136964138&text=Hola! Estoy interesado en los servicios legales que ofreces!"
+                  target="_blank"
+                >
+                  <span>
+                    Derecho Laboral del sector privado y del sector público
+                  </span>
+                </a>
+                <img
+                  onclick="document.getElementById('gi-1').click()"
+                  alt="Derecho Laboral del sector privado y del sector público"
+                  src="derecho-laboral.webp"
+                />
               </div>
               <div class="grid-item">
-                <span class="grid-item-title">
-                  Derecho laboral y de MiPymes
-                </span>
-                <img alt="Derecho laboral" src="derecho-pymes.webp">
+                <a
+                  id="gi-2"
+                  class="grid-item-title"
+                  href="https://api.whatsapp.com/send?phone=573136964138&text=Hola! Estoy interesado en los servicios legales que ofreces!"
+                  target="_blank"
+                >
+                  <span> Derecho Laboral y de MiPymes </span>
+                </a>
+                <img
+                  alt="Derecho Laboral y de MiPymes"
+                  src="derecho-pymes.webp"
+                  onclick="document.getElementById('gi-2').click()"
+                />
               </div>
               <div class="grid-item">
-                <span class="grid-item-title">
-                  Derecho comercial y tributario
-                </span>
-                <img alt="Derecho laboral" src="derecho-comercial.webp">
+                <a
+                  id="gi-3"
+                  class="grid-item-title"
+                  href="https://api.whatsapp.com/send?phone=573136964138&text=Hola! Estoy interesado en los servicios legales que ofreces!"
+                  target="_blank"
+                >
+                  <span> Derecho Civil y de Familia </span>
+                </a>
+                <img
+                  alt="Derecho Civil y de Familia"
+                  src="derecho-civil.webp"
+                  onclick="document.getElementById('gi-3').click()"
+                />
               </div>
               <div class="grid-item">
-                <span class="grid-item-title">
-                  Derecho penal
-                </span>
-                <img alt="Derecho laboral" src="derecho-penal.webp">
+                <a
+                  class="grid-item-title"
+                  id="gi-4"
+                  href="https://api.whatsapp.com/send?phone=573136964138&text=Hola! Estoy interesado en los servicios legales que ofreces!"
+                  target="_blank"
+                >
+                  <span> Derecho comercial y tributario </span>
+                </a>
+                <img
+                  alt="Derecho comercial y tributario"
+                  src="derecho-comercial.webp"
+                  onclick="document.getElementById('gi-3').click()"
+                />
               </div>
               <div class="grid-item">
-                <span class="grid-item-title">
-                  Derecho sindical, asociativo y politico
-                </span>
-                <img alt="Derecho laboral" src="derecho-sindical.webp">
+                <a
+                  id="gi-5"
+                  class="grid-item-title"
+                  href="https://api.whatsapp.com/send?phone=573136964138&text=Hola! Estoy interesado en los servicios legales que ofreces!"
+                  target="_blank"
+                >
+                  <span> Derecho médico y responsabilidad médica </span>
+                </a>
+                <img
+                  alt="Derecho médico y responsabilidad médica"
+                  src="derecho-medico.webp"
+                  onclick="document.getElementById('gi-5').click()"
+                />
               </div>
               <div class="grid-item">
-                <span class="grid-item-title">
-                  Derecho administrativo
-                </span>
-                <img alt="Derecho laboral" src="derecho-administrativo.webp">
+                <a
+                  id="gi-6"
+                  class="grid-item-title"
+                  href="https://api.whatsapp.com/send?phone=573136964138&text=Hola! Estoy interesado en los servicios legales que ofreces!"
+                  target="_blank"
+                >
+                  <span>Derecho administrativo </span>
+                </a>
+                <img
+                  alt="Derecho administrativo"
+                  src="derecho-administrativo.webp"
+                  onclick="document.getElementById('gi-6').click()"
+                />
+              </div>
+              <div class="grid-item">
+                <a
+                  id="gi-7"
+                  class="grid-item-title"
+                  href="https://api.whatsapp.com/send?phone=573136964138&text=Hola! Estoy interesado en los servicios legales que ofreces!"
+                  target="_blank"
+                >
+                  <span
+                    >Capacitación y formación a entidades públicas y privadas
+                  </span>
+                </a>
+                <img
+                  alt="Capacitación y formación a entidades públicas y privadas"
+                  src="formacion.webp"
+                  onclick="document.getElementById('gi-7').click()"
+                />
+              </div>
+              <div class="grid-item">
+                <a
+                  id="gi-8"
+                  class="grid-item-title"
+                  href="https://api.whatsapp.com/send?phone=573136964138&text=Hola! Estoy interesado en los servicios legales que ofreces!"
+                  target="_blank"
+                >
+                  <span> Derecho sindical, asociativo y político </span>
+                </a>
+                <img
+                  alt="Derecho sindical, asociativo y político"
+                  src="derecho-sindical.webp"
+                  onclick="document.getElementById('gi-8').click()"
+                />
+              </div>
+              <div class="grid-item">
+                <a
+                  id="gi-9"
+                  class="grid-item-title"
+                  href="https://api.whatsapp.com/send?phone=573136964138&text=Hola! Estoy interesado en los servicios legales que ofreces!"
+                  target="_blank"
+                >
+                  <span> Derecho penal </span>
+                </a>
+                <img
+                  alt="Derecho penal"
+                  src="derecho-penal.webp"
+                  onclick="document.getElementById('gi-9').click()"
+                />
               </div>
             </div>
             <button
               aria-label="next page"
               class="next-page"
               type="button"
-              onclick="document.getElementById('button-education').click()">
+              onclick="document.getElementById('button-education').click()"
+            >
               <i class="fa fa-arrow-down"></i>
             </button>
           </div>
@@ -131,15 +252,19 @@
               aria-label="previous page"
               class="prev-page"
               type="button"
-              onclick="document.getElementById('button-services').click()">
+              onclick="document.getElementById('button-services').click()"
+            >
               <i class="fa fa-arrow-up"></i>
             </button>
             <div class="about-me">
               <h1>María Barrios Socarras</h1>
               <p>
-                Estudiante de Derecho de la Universidad Externado de Colombia con principal interés en investigación, derecho laboral
-                individual y colectivo, derecho penal y criminología. Asimismo, me apasiona conocer acerca de las nuevas tecnologías y su uso en
-                los procesos jurídicos. Tengo un buen manejo del inglés y de las herramientas ofimáticas de Microsoft y Google.
+                Estudiante de Derecho de la Universidad Externado de Colombia
+                con principal interés en investigación, derecho laboral
+                individual y colectivo, derecho penal y criminología. Asimismo,
+                me apasiona conocer acerca de las nuevas tecnologías y su uso en
+                los procesos jurídicos. Tengo un buen manejo del inglés y de las
+                herramientas ofimáticas de Microsoft y Google.
               </p>
               <div class="horz-line"></div>
             </div>
