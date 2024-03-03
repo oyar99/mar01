@@ -1,6 +1,6 @@
 // Author: Jhon
 // Handles custom scroller logic relying on css animations
-import 'hammerjs'
+import 'hammerjs';
 import { DIRECTION_DOWN, DIRECTION_UP } from 'hammerjs';
 
 const profileButton: HTMLInputElement = <HTMLInputElement>(
@@ -70,13 +70,10 @@ window.addEventListener("wheel", (event) => {
   }
 });
 
-
-
 const manager = new Hammer.Manager(window.document.documentElement);
 const Swipe = new Hammer.Swipe();
 manager.add(Swipe);
 
-// Subscribe to a desired event
 manager.on('swipe', function(e) {
   switch(e.offsetDirection) {
     case DIRECTION_DOWN:

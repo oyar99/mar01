@@ -41,6 +41,10 @@ main {
   width: 100%;
 }
 
+.on-load-anim {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
 .timeline-container {
 	position: relative;
 	transition: all 1.5s ease-in-out;
@@ -280,7 +284,25 @@ a.linkedin-link {
   }
 }
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @media (max-width: 640px) {
+  .action-button-container {
+    display: none;
+  }
+
+  .timeline-container {
+    margin: 0 10px;
+  }
+
 	.card {
 		flex-direction: column;
 	}
@@ -295,6 +317,20 @@ a.linkedin-link {
   }
 
   .services-container {
-    
+    display: flex;
+    height: 80svh;
+    align-items: center;
+  }
+
+  .services-container .grid-item.hidden-mb {
+    display: none;
+  }
+
+  .grid-item img {
+    min-height: 300px;
+  }
+
+  .grid-item:hover {
+    transform: none;
   }
 }
