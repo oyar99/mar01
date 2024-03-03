@@ -99,11 +99,11 @@ main {
 
 #services-section,
 #education-section {
-	height: 100vh;
+	height: 100svh;
 }
 
 #profile-section {
-  height: calc(100vh - 20px);
+  height: calc(100svh - 20px);
 }
 
 section {
@@ -161,7 +161,7 @@ section {
 }
 
 #button-services:checked ~ .timeline-container {
-	transform: translate3d(0, -100vh, 0);
+	transform: translate3d(0, -100svh, 0);
 }
 
 #button-services:checked ~ .action-button-container-services {
@@ -169,7 +169,7 @@ section {
 }
 
 #button-education:checked ~ .timeline-container {
-	transform: translate3d(0, calc(-100vh * 2), 0);
+	transform: translate3d(0, calc(-100svh * 2), 0);
 }
 
 #button-education:checked ~ .action-button-container-education {
@@ -197,7 +197,7 @@ a.linkedin-link {
   align-items: center;
   position: relative;
   overflow: hidden;
-  max-height: 25vh;
+  max-height: 25svh;
 }
 
 .grid-item a {
