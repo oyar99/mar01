@@ -204,6 +204,10 @@ a.linkedin-link {
   max-height: 25svh;
 }
 
+.grid-item-controls {
+  display: none;
+}
+
 .grid-item a {
   text-decoration: none;
   color: inherit;
@@ -294,6 +298,16 @@ a.linkedin-link {
   }
 }
 
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes slideOutToLeft {
   0% {
     transform: translateX(0);
@@ -301,6 +315,16 @@ a.linkedin-link {
 
   100% {
     transform: translateX(-120%);
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(120%);
   }
 }
 
@@ -315,6 +339,7 @@ a.linkedin-link {
 
 	.card {
 		flex-direction: column;
+    width: 100%;
 	}
 
   .card .card-title {
@@ -326,18 +351,62 @@ a.linkedin-link {
     margin-bottom: 10px;
   }
 
+  #services-section {
+    overflow-x: hidden;
+  }
+
   .services-container {
     display: flex;
     height: 80svh;
     align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   .services-container .grid-item.hidden-mb {
     display: none;
   }
 
-  .services-container .grid-item.slideOut-mb {
+  .services-container .grid-item.slideInFromLeft-mb {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+
+  .services-container .grid-item.slideOutLeft-mb {
     animation: 1s ease-out 0s 1 slideOutToLeft;
+  }
+
+  .services-container .grid-item.slideInFromRight-mb {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+  }
+
+  .services-container .grid-item.slideOutRight-mb {
+    animation: 1s ease-out 0s 1 slideOutToRight;
+  }
+
+  .grid-item {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+  }
+
+  .grid-item-controls {
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .grid-item-controls .grid-control {
+    height: 5px;
+    width: 5px;
+    border: 1px solid #0a0a0a;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+
+  .grid-control.active {
+    background-color: #0a0a0a;
   }
 
   .grid-item img {
