@@ -4,7 +4,7 @@ import "hammerjs";
 import { DIRECTION_LEFT, DIRECTION_RIGHT } from "hammerjs";
 
 const MAX_ITEMS_GRID = 9;
-const WAIT_TO_TRIGGER_SWIPE = 2000;
+const WAIT_TO_TRIGGER_SWIPE = 3000;
 const isGridManagerEnabled = window.innerWidth <= 640;
 
 let isAnimationRunning =
@@ -103,7 +103,7 @@ function main() {
       prev?.classList.remove(animationClassForPrev);
       prev?.classList.add("hidden-mb");
       el?.classList.remove(animationClassForCurr);
-    }, 1000);
+    }, 950);
 
     // Update pagination controls
     lastDirection &&

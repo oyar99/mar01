@@ -75,18 +75,12 @@ main {
   text-align: right;
 }
 
-.card .about-me {
-  text-align: left;
-}
-
-.card .card-title,
-.card .about-me {
+.card .card-title {
 	font-size: 1em;
 	font-weight: 500;
 }
 
-.card .card-title h1,
-.card .about-me h1 {
+.card .card-title h1 {
 	font-size: 2.5em;
 	font-weight: 600;
 }
@@ -268,6 +262,36 @@ a.linkedin-link {
   color: #0a0a0a;
 }
 
+.cv-section {
+  margin-top: 35px;
+  text-align: justify;
+}
+
+.cv-column li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.company-icon img,
+.education-icon img {
+  display: none;
+}
+
+.company-details h3,
+.education-details h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.company-details h4,
+.education-details h4 {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.company-details p {
+  font-size: 12px;
+}
+
 @keyframes moveDownUp {
   0%, 100% {
     top: 5px;
@@ -415,5 +439,19 @@ a.linkedin-link {
 
   .grid-item:hover {
     transform: none;
+  }
+
+  .cv-section {
+    margin-top: 25px;
+  }
+
+  .cv-column li:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-height: 600px) {
+  .cv-column.education {
+    display: none;
   }
 }
