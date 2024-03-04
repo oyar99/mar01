@@ -294,6 +294,16 @@ a.linkedin-link {
   }
 }
 
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
 @media (max-width: 640px) {
   .action-button-container {
     display: none;
@@ -324,6 +334,10 @@ a.linkedin-link {
 
   .services-container .grid-item.hidden-mb {
     display: none;
+  }
+
+  .services-container .grid-item.slideOut-mb {
+    animation: 1s ease-out 0s 1 slideOutToLeft;
   }
 
   .grid-item img {
