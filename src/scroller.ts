@@ -76,11 +76,12 @@ manager.add(Swipe);
 
 manager.on('swipe', function(e) {
   switch(e.offsetDirection) {
+    // Scroll intuitively works better if it's inverted
     case DIRECTION_DOWN:
-      handleAnimation("down");
+      handleAnimation("up");
       break;
     case DIRECTION_UP:
-      handleAnimation("up");
+      handleAnimation("down");
       break;
   }
 });

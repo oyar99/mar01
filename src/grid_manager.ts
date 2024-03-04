@@ -18,14 +18,14 @@ function main() {
 
     const handleSwipeEvent = (e: HammerInput) => {
         switch(e.offsetDirection) {
-            case DIRECTION_LEFT:
+            case DIRECTION_RIGHT:
               switch (true) {
                   case currentPosInGrid > 0:
                       currentPosInGrid--;
                       break;
               }
               break;
-            case DIRECTION_RIGHT:
+            case DIRECTION_LEFT:
               switch (true) {
                   case currentPosInGrid < MAX_ITEMS_GRID - 1:
                       currentPosInGrid++;
