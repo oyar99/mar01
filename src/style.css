@@ -298,6 +298,19 @@ a.linkedin-link {
   font-size: 12px;
 }
 
+.cv-download {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 5px;
+  right: 5px;
+  border: 1px solid;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
 @keyframes moveDownUp {
   0%, 100% {
     top: 5px;
