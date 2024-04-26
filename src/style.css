@@ -25,7 +25,7 @@ p {
 html,
 body {
 	font-family: "Montserrat", sans-serif;
-  background-color: #f1efe5;
+  background-color: #b7b3b4;
   overflow: hidden;
 }
 
@@ -66,7 +66,7 @@ main {
 
 .card .card-profile-image img {
   margin-right: 50px;
-  border: 1px solid var(--font-color);
+  /*border: 1px solid var(--font-color);*/
   transition: all 0.25s ease-in-out;
   opacity: 1;
 }
@@ -187,7 +187,7 @@ a.linkedin-link {
 }
 
 .grid-item {
-  background-color: #f1efe5;
+  background-color: #b7b3b4;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -219,7 +219,7 @@ a.linkedin-link {
   text-align: center;
   font-weight: 600;
   font-size: 0.8em;
-  background: #f1efe5;
+  background: #b7b3b4;
   padding: 2px;
 }
 
@@ -288,12 +288,13 @@ a.linkedin-link {
 }
 
 .company-details span,
-.education-details h4 {
+.education-details span {
   font-style: italic;
   font-size: 14px;
   font-weight: normal;
 }
 
+.education-details p,
 .company-details p {
   font-size: 12px;
 }
@@ -309,6 +310,7 @@ a.linkedin-link {
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  color: #18478f;
 }
 
 @keyframes moveDownUp {
@@ -466,6 +468,10 @@ a.linkedin-link {
 
   .cv-column li:not(:last-child) {
     margin-bottom: 5px;
+  }
+
+  .hide-mb {
+    display: none;
   }
 }
 
